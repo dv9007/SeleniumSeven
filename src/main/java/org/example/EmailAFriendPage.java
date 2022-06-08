@@ -1,4 +1,5 @@
 package org.example;
+
 import org.openqa.selenium.By;
 import org.testng.Assert;
 
@@ -11,8 +12,8 @@ public class EmailAFriendPage extends Utils{
 
     public void userEnterFriendsEmailAndPersonalMessage(){
         //Enter friend's email
-        typeText(_friendsEmailField,"somebody877"+randomDate()+"@gmail.com");
-        //driver.findElement(By.id("friend-email")).sendKeys("testingpatel22@gmail.com");
+        typeText(_friendsEmailField,"dv007"+randomDate()+"@gmail.com");
+        //driver.findElement(By.id("friend-email")).sendKeys("darshakgoyani123@gmil.com");
 
         //Enter personal message
         typeText(_personalMessage, "Please do checkout this amazing product");
@@ -25,9 +26,9 @@ public class EmailAFriendPage extends Utils{
 
 
 
-    private By _resultText = By.className("result");
+    private static By _resultText = By.className("result");
 
-    public void verifyUserSentEmailSuccessfully(){
+    public static void verifyUserSentEmailSuccessfully(){
         //Verify the message "Your message has been sent." (Assert Point)
         String actualMessage = driver.findElement(_resultText).getText();
         String expectedMessage = "Your message has been sent.";

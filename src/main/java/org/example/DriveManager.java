@@ -1,12 +1,12 @@
 package org.example;
-
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.time.Duration;
 
-import static org.example.BasePage.driver;
+
 
 public class DriveManager extends Utils
 
@@ -14,7 +14,7 @@ public class DriveManager extends Utils
 
 
 
-    static String browserName = "firefox";
+    static String browserName = "Chrome";
     public  void openURL() {
 
 
